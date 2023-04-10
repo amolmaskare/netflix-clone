@@ -1,5 +1,6 @@
 {
   "name": "netflix-ui",
+  "homepage": "https://amolmaskare.github.io/netflix-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +20,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    
+    //"deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
